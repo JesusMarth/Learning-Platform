@@ -1,16 +1,18 @@
+@import '../public/bootstrap-icons.css';
+
+/* Paleta de colores y tipografía global */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-primary: #6C63FF;
+  --color-secondary: #43BCCD;
+  --color-success: #4ADE80;
+  --color-danger: #F87171;
+  --color-bg: #F8F9FB;
+  --color-bg-dark: #23272F;
+  --color-text: #23272F;
+  --color-text-light: #F8F9FB;
+  --color-gray: #ADB5BD;
+  --color-accent: #FFD166;
+  --font-main: 'Inter', 'Poppins', 'Nunito', Arial, sans-serif;
 }
 
 a {
@@ -22,13 +24,90 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+body, html {
+  min-height: 100vh;
+  width: 100vw;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  width: 100vw;
+  transition: background 0.3s, color 0.3s;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
+
+/* Ejemplo de uso de la paleta en utilidades */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+.bg-success {
+  background-color: var(--color-success) !important;
+}
+.bg-danger {
+  background-color: var(--color-danger) !important;
+}
+.bg-accent {
+  background-color: var(--color-accent) !important;
+}
+.text-primary {
+  color: var(--color-primary) !important;
+}
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+.text-success {
+  color: var(--color-success) !important;
+}
+.text-danger {
+  color: var(--color-danger) !important;
+}
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* Bordes y sombras suaves */
+.card, .modal-content, .navbar, .footer {
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(44,62,80,0.07);
+}
+
+/* Preparar base para modo oscuro */
+body.dark-mode {
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+body.dark-mode .card, body.dark-mode .modal-content, body.dark-mode .navbar, body.dark-mode .footer {
+  background: #23272F !important;
+  color: #F8F9FB !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.15);
+}
+
+/* Mejorar transiciones y animaciones */
+button, .btn, .card, .modal-content, .navbar, .footer {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* Importar tipografía Inter desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 h1 {
   font-size: 3.2em;
@@ -54,6 +133,260 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Fondo degradado para la home */
+.home-bg {
+  background: linear-gradient(120deg, #f8f9fb 60%, #e6f0ff 100%);
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Animación de la CTA */
+.home-cta {
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s;
+}
+.home-cta:hover, .home-cta:focus {
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 6px 24px 0 rgba(108,99,255,0.12);
+}
+
+/* Tarjetas de características */
+.home-feature-card {
+  transition: box-shadow 0.18s, transform 0.18s;
+  border-radius: 1.2rem;
+  background: #fff;
+}
+.home-feature-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(67,188,205,0.10), 0 1.5px 8px 0 rgba(108,99,255,0.10);
+  transform: translateY(-4px) scale(1.03);
+  z-index: 2;
+}
+
+body, .home-bg {
+  color: #23272F;
+}
+
+.home-bg h1, .home-bg .display-3, .home-bg .fw-bold {
+  color: #23272F;
+  text-shadow: 0 2px 12px rgba(120,120,180,0.10);
+}
+
+.home-bg .lead, .home-bg .text-secondary {
+  color: #f8f9fb !important;
+  text-shadow: 0 1px 8px rgba(80,80,120,0.10);
+}
+
+.home-feature-card {
+  background: rgba(255,255,255,0.92) !important;
+  box-shadow: 0 8px 32px 0 rgba(67,188,205,0.10), 0 1.5px 8px 0 rgba(108,99,255,0.10);
+  border-radius: 1.2rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.home-feature-card:hover {
+  box-shadow: 0 12px 40px 0 rgba(67,188,205,0.16), 0 2px 12px 0 rgba(108,99,255,0.14);
+  transform: translateY(-4px) scale(1.03);
+  z-index: 2;
+}
+
+.home-feature-card h5,
+.home-feature-card .fw-bold {
+  color: #23272F !important;
+  text-shadow: none;
+}
+
+.home-feature-card p,
+.home-feature-card .text-secondary {
+  color: #5a5a7a !important;
+  text-shadow: none;
+}
+
+/* Dashboard fondo y tarjetas */
+.dashboard-bg {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.dashboard-bg .card,
+.dashboard-bg .home-feature-card {
+  background: rgba(255,255,255,0.92) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 rgba(67,188,205,0.10), 0 1.5px 8px 0 rgba(108,99,255,0.10);
+  border: none;
+}
+
+.dashboard-bg .card-title,
+.dashboard-bg .fw-bold,
+.dashboard-bg .fw-semibold {
+  color: #23272F !important;
+}
+
+.dashboard-bg .text-secondary,
+.dashboard-bg .card-text {
+  color: #5a5a7a !important;
+}
+
+/* Logros: tarjetas más modernas */
+.dashboard-bg .card.h-100 {
+  border: 2px solid rgba(108,99,255,0.10) !important;
+  transition: box-shadow 0.18s, border-color 0.18s;
+}
+.dashboard-bg .card.h-100:hover {
+  box-shadow: 0 12px 40px 0 rgba(67,188,205,0.16), 0 2px 12px 0 rgba(108,99,255,0.14);
+  border-color: var(--color-primary) !important;
+  z-index: 2;
+}
+.dashboard-bg .card.h-100 .card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.dashboard-bg .card.h-100 .card-text {
+  font-size: 1rem;
+}
+
+.games-bg {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.games-area-card {
+  background: rgba(255,255,255,0.92) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 rgba(67,188,205,0.10), 0 1.5px 8px 0 rgba(108,99,255,0.10);
+  border: none;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.games-area-card:hover {
+  box-shadow: 0 12px 40px 0 rgba(67,188,205,0.16), 0 2px 12px 0 rgba(108,99,255,0.14);
+  /* transform: translateY(-4px) scale(1.03); */
+  transform: translateY(-4px);
+  z-index: 2;
+}
+.games-area-btn {
+  transition: transform 0.16s, box-shadow 0.16s;
+  box-shadow: 0 2px 8px 0 rgba(108,99,255,0.08);
+}
+.games-area-btn:hover, .games-area-btn:focus {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 6px 24px 0 rgba(67,188,205,0.12);
+}
+
+/* Fondo y tarjeta para minijuegos */
+.minigame-bg {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #f8f9fb 60%, #e6f0ff 100%);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.minigame-blur-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  filter: blur(8px) brightness(1.08);
+}
+.minigame-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(120deg, rgba(108,99,255,0.10) 0%, rgba(67,188,205,0.10) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.minigame-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(67,188,205,0.10), 0 1.5px 8px 0 rgba(108,99,255,0.10);
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  margin: 2rem 0;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.minigame-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
+}
+/* Acentos por área */
+.minigame-math {
+  --minigame-accent: var(--color-success);
+}
+.minigame-language {
+  --minigame-accent: var(--color-secondary);
+}
+.minigame-history {
+  --minigame-accent: var(--color-accent);
+}
+.minigame-title i {
+  color: var(--minigame-accent);
+  font-size: 2.2rem;
+}
+.minigame-btn {
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  padding: 0.7em 1.5em;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  box-shadow: 0 2px 12px 0 rgba(67,188,205,0.08);
+}
+.minigame-btn:active {
+  transform: scale(0.97);
+}
+.minigame-feedback {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.minigame-back {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 3;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px 0 rgba(67,188,205,0.10);
+  border: none;
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.minigame-back:hover {
+  background: var(--minigame-accent, #e6f0ff);
+  box-shadow: 0 4px 16px 0 rgba(67,188,205,0.16);
+}
+@media (max-width: 600px) {
+  .minigame-card {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .minigame-title {
+    font-size: 1.3rem;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -65,4 +398,411 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+body.dark-mode {
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+body.dark-mode .minigame-bg,
+body.dark-mode .dashboard-bg,
+body.dark-mode .home-bg {
+  background: linear-gradient(120deg, #23272F 60%, #23273a 100%) !important;
+}
+
+body.dark-mode .minigame-card,
+body.dark-mode .profile-glass-card,
+body.dark-mode .dashboard-bg .card,
+body.dark-mode .home-feature-card {
+  background: rgba(35,39,47,0.92) !important;
+  color: var(--color-text-light) !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+}
+
+body.dark-mode .minigame-title,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+  color: #fff !important;
+}
+
+body.dark-mode .text-secondary,
+body.dark-mode .text-muted,
+body.dark-mode .card-title,
+body.dark-mode .fw-bold,
+body.dark-mode .fw-semibold,
+body.dark-mode .lead,
+body.dark-mode .card-text {
+  color: #e0e6f5 !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #23273a !important;
+  color: var(--color-text-light) !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode a, body.dark-mode .nav-link, body.dark-mode .navbar-brand {
+  color: #8ab4f8 !important;
+}
+body.dark-mode a:hover, body.dark-mode .nav-link:hover {
+  color: #fff !important;
+}
+
+body.dark-mode .btn,
+body.dark-mode .minigame-btn {
+  color: #fff !important;
+}
+
+body.dark-mode .btn-primary,
+body.dark-mode .minigame-btn.btn-primary {
+  background: #6C63FF;
+  border-color: #6C63FF;
+}
+
+body.dark-mode .btn-outline-primary,
+body.dark-mode .minigame-btn.btn-outline-primary {
+  color: #8ab4f8 !important;
+  border-color: #8ab4f8 !important;
+}
+
+body.dark-mode .btn-outline-secondary,
+body.dark-mode .minigame-btn.btn-outline-secondary {
+  color: #e0e6f5 !important;
+  border-color: #e0e6f5 !important;
+}
+
+body.dark-mode .btn-outline-success {
+  color: #4ADE80 !important;
+  border-color: #4ADE80 !important;
+}
+body.dark-mode .btn-outline-danger {
+  color: #F87171 !important;
+  border-color: #F87171 !important;
+}
+body.dark-mode .btn-outline-warning {
+  color: #FFD166 !important;
+  border-color: #FFD166 !important;
+}
+body.dark-mode .form-label,
+body.dark-mode label {
+  color: #e0e6f5 !important;
+}
+
+body.dark-mode .alert {
+  background: #23273a;
+  color: var(--color-text-light);
+  border-color: #444;
+}
+
+body.dark-mode .badge.bg-primary {
+  background: #6C63FF !important;
+  color: #fff !important;
+}
+
+body.dark-mode .badge.bg-success {
+  background: #4ADE80 !important;
+  color: #23272F !important;
+}
+
+body.dark-mode .badge.bg-danger {
+  background: #F87171 !important;
+  color: #fff !important;
+}
+body.dark-mode .badge.bg-info {
+  background: #43BCCD !important;
+  color: #fff !important;
+}
+body.dark-mode .badge.bg-warning {
+  background: #FFD166 !important;
+  color: #23272F !important;
+}
+
+/* Scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 150, 0.25); /* Ajusta a tu paleta */
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 150, 0.45);
+}
+
+/* Scrollbar para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 150, 0.25) transparent;
+}
+
+/* Estilos para formularios de autenticación en modo oscuro */
+.dark-mode .auth-card {
+  background: rgba(33, 37, 41, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .auth-card h2,
+.dark-mode .auth-card .text-secondary {
+  color: #ffffff !important;
+}
+
+.dark-mode .auth-card .form-label {
+  color: #e9ecef !important;
+  font-weight: 500;
+}
+
+.dark-mode .auth-card .form-control {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .auth-card .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(108, 99, 255, 0.25) !important;
+}
+
+.dark-mode .auth-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.dark-mode .auth-card .text-decoration-none {
+  color: #adb5bd !important;
+}
+
+.dark-mode .auth-card .text-decoration-none:hover {
+  color: #ffffff !important;
+}
+
+.dark-mode .auth-card .fw-semibold {
+  color: var(--color-primary) !important;
+}
+
+/* Mejorar contraste general en modo oscuro */
+.dark-mode .text-secondary {
+  color: #adb5bd !important;
+}
+
+.dark-mode .form-label {
+  color: #e9ecef !important;
+}
+
+.dark-mode .form-control {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(108, 99, 255, 0.25) !important;
+}
+
+.dark-mode .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Mejorar feedback de minijuegos */
+.minigame-feedback {
+  font-size: 0.95rem !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 0.75rem !important;
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+  white-space: pre-line !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+  margin: 0.5rem 0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.minigame-feedback.bg-success {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+  color: white !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.minigame-feedback.bg-danger {
+  background: linear-gradient(135deg, #dc3545, #e74c3c) !important;
+  color: white !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+/* Modo oscuro para feedback */
+.dark-mode .minigame-feedback.bg-success {
+  background: linear-gradient(135deg, #198754, #146c43) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode .minigame-feedback.bg-danger {
+  background: linear-gradient(135deg, #b02a37, #a52834) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+}
+
+/* Estilos para botones de minijuegos */
+.btn.btn-accent,
+.minigame-btn.btn-accent {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+.btn.btn-accent:hover,
+.minigame-btn.btn-accent:hover {
+  background: linear-gradient(135deg, #7c3aed, #9333ea) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4) !important;
+  color: white !important;
+}
+
+.btn.btn-accent:active,
+.minigame-btn.btn-accent:active {
+  transform: translateY(0) !important;
+}
+
+.btn.btn-accent:focus,
+.minigame-btn.btn-accent:focus {
+  box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.25), 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+.btn.btn-accent:disabled,
+.minigame-btn.btn-accent:disabled {
+  background: linear-gradient(135deg, #a78bfa, #c084fc) !important;
+  opacity: 0.6 !important;
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2) !important;
+}
+
+/* Modo oscuro para btn-accent */
+.dark-mode .btn.btn-accent,
+.dark-mode .minigame-btn.btn-accent {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6) !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4) !important;
+}
+
+.dark-mode .btn.btn-accent:hover,
+.dark-mode .minigame-btn.btn-accent:hover {
+  background: linear-gradient(135deg, #6d28d9, #7c3aed) !important;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5) !important;
+}
+
+.dark-mode .btn.btn-accent:focus,
+.dark-mode .minigame-btn.btn-accent:focus {
+  box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.3), 0 4px 12px rgba(139, 92, 246, 0.4) !important;
+}
+
+.dark-mode .btn.btn-accent:disabled,
+.dark-mode .minigame-btn.btn-accent:disabled {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa) !important;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Estilos para botones de opciones en minijuegos */
+.minigame-option-btn {
+  transition: all 0.2s ease !important;
+}
+
+.minigame-option-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.minigame-option-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* Modo oscuro para botones de opciones */
+.dark-mode .minigame-option-btn {
+  border-color: #475569 !important;
+  background: linear-gradient(135deg, #1e293b, #334155) !important;
+  color: #e2e8f0 !important;
+}
+
+.dark-mode .minigame-option-btn:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Estilos para botones de minijuegos de matemáticas */
+.btn.btn-math,
+.minigame-btn.btn-math {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+.btn.btn-math:hover,
+.minigame-btn.btn-math:hover {
+  background: linear-gradient(135deg, #059669, #047857) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4) !important;
+  color: white !important;
+}
+
+.btn.btn-math:active,
+.minigame-btn.btn-math:active {
+  transform: translateY(0) !important;
+}
+
+.btn.btn-math:focus,
+.minigame-btn.btn-math:focus {
+  box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25), 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+.btn.btn-math:disabled,
+.minigame-btn.btn-math:disabled {
+  background: linear-gradient(135deg, #34d399, #6ee7b7) !important;
+  opacity: 0.6 !important;
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2) !important;
+}
+
+/* Modo oscuro para btn-math */
+.dark-mode .btn.btn-math,
+.dark-mode .minigame-btn.btn-math {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4) !important;
+}
+
+.dark-mode .btn.btn-math:hover,
+.dark-mode .minigame-btn.btn-math:hover {
+  background: linear-gradient(135deg, #047857, #059669) !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5) !important;
+}
+
+.dark-mode .btn.btn-math:focus,
+.dark-mode .minigame-btn.btn-math:focus {
+  box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.3), 0 4px 12px rgba(16, 185, 129, 0.4) !important;
+}
+
+.dark-mode .btn.btn-math:disabled,
+.dark-mode .minigame-btn.btn-math:disabled {
+  background: linear-gradient(135deg, #10b981, #34d399) !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Estilos para el "+" del logo */
+.logo-plus {
+  color: #6c757d !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Modo oscuro para el "+" del logo */
+.dark-mode .logo-plus {
+  color: #adb5bd !important;
 }

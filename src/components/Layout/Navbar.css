@@ -1,0 +1,393 @@
+/* Animación de subrayado y transición de color para los enlaces del Navbar */
+.nav-animated-link {
+  position: relative;
+  color: var(--color-text);
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.nav-animated-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0.1em;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+  z-index: 1;
+}
+
+.nav-animated-link:hover,
+.nav-animated-link:focus {
+  color: var(--color-primary);
+}
+
+.nav-animated-link:hover::after,
+.nav-animated-link:focus::after {
+  transform: scaleX(1);
+}
+
+.nav-animated-link.active {
+  color: var(--color-primary);
+}
+
+.nav-animated-link.active::after {
+  transform: scaleX(1);
+} 
+
+/* Navbar principal */
+.glass-navbar {
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.glass-navbar .navbar-brand,
+.glass-navbar .nav-link,
+.glass-navbar .dropdown-toggle,
+.glass-navbar .dropdown-item {
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+/* Estilo específico para el "+" del logo */
+.glass-navbar .navbar-brand .logo-plus {
+  color: #6c757d !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.glass-navbar .nav-link.nav-animated-link.active {
+  color: var(--color-primary) !important;
+}
+
+.glass-navbar .dropdown-menu {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-top: 8px;
+}
+
+/* Botón de cambio de tema */
+.theme-toggle-btn {
+  background: rgba(255,255,255,0.9);
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border-color: rgba(0,0,0,0.2);
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.theme-toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.25), 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.theme-icon {
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun-icon {
+  color: #f39c12;
+  animation: rotate 0.5s ease-in-out;
+}
+
+.moon-icon {
+  color: #6f42c1;
+  animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) scale(0.8); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Modo oscuro para botón de tema */
+.dark-mode .theme-toggle-btn {
+  background: rgba(33, 37, 41, 0.9);
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.dark-mode .theme-toggle-btn:hover {
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.dark-mode .theme-toggle-btn:focus {
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25), 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.dark-mode .sun-icon {
+  color: #fbbf24;
+}
+
+.dark-mode .moon-icon {
+  color: #8b5cf6;
+}
+
+/* Selector de idioma */
+.language-selector {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6c757d;
+  min-width: 65px;
+  justify-content: center;
+}
+
+.language-btn:hover {
+  background: rgba(111, 66, 193, 0.1);
+  color: #6f42c1;
+  transform: translateY(-1px);
+}
+
+.language-btn.active {
+  background: linear-gradient(135deg, #6f42c1, #8b5cf6);
+  color: white;
+  box-shadow: 0 4px 12px rgba(111, 66, 193, 0.3);
+  transform: translateY(-1px);
+}
+
+.language-btn .flag-icon {
+  font-size: 16px;
+  color: inherit;
+}
+
+.language-btn .language-text {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Modo Oscuro */
+.dark-mode .glass-navbar {
+  background: rgba(33, 37, 41, 0.9) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.dark-mode .glass-navbar .navbar-brand,
+.dark-mode .glass-navbar .nav-link,
+.dark-mode .glass-navbar .dropdown-toggle,
+.dark-mode .glass-navbar .dropdown-item {
+  color: #ffffff !important;
+}
+
+/* Estilo específico para el "+" del logo en modo oscuro */
+.dark-mode .glass-navbar .navbar-brand .logo-plus {
+  color: #adb5bd !important;
+}
+
+.dark-mode .glass-navbar .dropdown-menu {
+  background: rgba(33, 37, 41, 0.95);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Estilos específicos para dropdown items en modo oscuro */
+.dark-mode .glass-navbar .dropdown-item {
+  color: #ffffff !important;
+  transition: all 0.2s ease;
+}
+
+.dark-mode .glass-navbar .dropdown-item:hover {
+  background-color: rgba(139, 92, 246, 0.2) !important;
+  color: #ffffff !important;
+  transform: translateX(4px);
+}
+
+.dark-mode .glass-navbar .dropdown-item:active {
+  background-color: rgba(139, 92, 246, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .glass-navbar .dropdown-divider {
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* Selector de idioma - Modo Oscuro */
+.dark-mode .language-selector {
+  background: rgba(33, 37, 41, 0.9);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.dark-mode .language-btn {
+  color: #adb5bd;
+}
+
+.dark-mode .language-btn:hover {
+  background: rgba(139, 92, 246, 0.2);
+  color: #ffffff;
+}
+
+.dark-mode .language-btn.active {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: white;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .glass-navbar .navbar-collapse {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .glass-navbar .navbar-nav {
+    gap: 8px !important;
+  }
+  
+  .glass-navbar .nav-item {
+    padding: 8px 0;
+  }
+  
+  .glass-navbar .dropdown-menu {
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
+    margin-top: 4px;
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+  }
+  
+  .glass-navbar .dropdown-item {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 4px 0;
+    transition: background-color 0.2s;
+  }
+  
+  .glass-navbar .dropdown-item:hover {
+    background-color: rgba(111, 66, 193, 0.1) !important;
+    color: #6f42c1 !important;
+  }
+  
+  .glass-navbar .dropdown-divider {
+    margin: 8px 0;
+    border-color: rgba(0,0,0,0.1);
+  }
+  
+  .glass-navbar .navbar-toggler {
+    border: 2px solid rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px);
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .glass-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.25);
+  }
+  
+  .glass-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  .language-selector {
+    margin: 8px 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .language-btn {
+    flex: 1;
+    max-width: 85px;
+  }
+  
+  .theme-toggle-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .theme-icon {
+    font-size: 18px;
+  }
+  
+  /* Modo oscuro responsive */
+  .dark-mode .glass-navbar .navbar-collapse {
+    background: rgba(33, 37, 41, 0.95);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  
+  .dark-mode .glass-navbar .dropdown-menu {
+    background: rgba(33, 37, 41, 0.98);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  
+  .dark-mode .glass-navbar .dropdown-item {
+    color: #ffffff !important;
+  }
+  
+  .dark-mode .glass-navbar .dropdown-item:hover {
+    background-color: rgba(139, 92, 246, 0.2) !important;
+    color: #ffffff !important;
+  }
+  
+  .dark-mode .glass-navbar .dropdown-divider {
+    border-color: rgba(255,255,255,0.1);
+  }
+  
+  .dark-mode .glass-navbar .navbar-toggler {
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(33, 37, 41, 0.9);
+  }
+  
+  .dark-mode .glass-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+} 

@@ -1,0 +1,219 @@
+{
+  "navbar": {
+    "panel": "Panel",
+    "games": "Minijuegos",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "points": "Puntos",
+    "profile": "Perfil",
+    "logout": "Cerrar sesión"
+  },
+  "dashboard": {
+    "user_stats": "Estadísticas de usuario",
+    "total_points": "Puntos totales:",
+    "achievements": "Logros",
+    "progress_info": "¡Sigue jugando para desbloquear más logros y mejorar tus estadísticas!"
+  },
+  "stats": {
+    "games_played": "Partidas jugadas",
+    "questions_answered": "Preguntas respondidas",
+    "max_streak": "Racha máxima",
+    "correct": "Aciertos",
+    "wrong": "Fallos",
+    "accuracy": "% de acierto",
+    "correct_vs_wrong": "Aciertos vs Fallos",
+    "games_by_area": "Partidas por área",
+    "registered_since": "Registrado desde"
+  },
+  "areas": {
+    "languages": "Idiomas",
+    "math": "Matemáticas",
+    "history": "Historia"
+  },
+  "achievements": {
+    "first_game": {
+      "name": "¡Primer juego!",
+      "desc": "Completa tu primer minijuego."
+    },
+    "100_points": {
+      "name": "100 puntos",
+      "desc": "Alcanza 100 puntos."
+    },
+    "5_correct": {
+      "name": "Racha de 5",
+      "desc": "Consigue 5 respuestas correctas seguidas."
+    },
+    "10_correct": {
+      "name": "Racha de 10",
+      "desc": "Consigue 10 respuestas correctas seguidas."
+    },
+    "all_areas": {
+      "name": "Explorador",
+      "desc": "Juega al menos un minijuego en cada área."
+    },
+    "10_games": {
+      "name": "Jugador constante",
+      "desc": "Juega 10 minijuegos."
+    },
+    "perfect_game": {
+      "name": "¡Perfecto!",
+      "desc": "Termina un minijuego sin fallos."
+    },
+    "first_fail": {
+      "name": "Aprendiendo del error",
+      "desc": "Comete tu primer error en un minijuego."
+    },
+    "3_days_row": {
+      "name": "Constancia",
+      "desc": "Juega 3 días seguidos (simulado)."
+    },
+    "hidden": {
+      "name": "Logro oculto",
+      "desc": "Descubre el logro secreto."
+    },
+    "first_avatar": {
+      "name": "¡Nuevo look!",
+      "desc": "Personaliza tu avatar por primera vez."
+    },
+    "first_name_change": {
+      "name": "Identidad renovada",
+      "desc": "Cambia tu nombre de usuario."
+    },
+    "first_theme": {
+      "name": "Personalización",
+      "desc": "Cambia el tema de la plataforma."
+    },
+    "unlocked": "¡Desbloqueado!",
+    "locked": "Bloqueado",
+    "unlocked_title": "¡Logro desbloqueado!",
+    "unlocked_message": "Has desbloqueado un nuevo logro:",
+    "close": "Cerrar"
+  },
+  "profile": {
+    "edit_name": "Editar nombre",
+    "change_photo": "Cambiar foto",
+    "change_password": "Cambiar contraseña",
+    "delete_account": "Eliminar cuenta",
+    "logout": "Cerrar sesión",
+    "avatar_hint": "Imagen recomendada: cuadrada, mínimo 120x120px",
+    "user": "Usuario",
+    "password_demo_info": "Este formulario es solo una simulación para la demo. No se guarda ninguna contraseña real.",
+    "current_password": "Contraseña actual",
+    "new_password": "Nueva contraseña",
+    "confirm_new_password": "Confirmar nueva contraseña",
+    "light_mode": "Modo claro",
+    "dark_mode": "Modo oscuro"
+  },
+  "games": {
+    "languages_title": "Idiomas",
+    "english": "Inglés",
+    "english_direct": "Traducción directa",
+    "english_multiple": "Opción múltiple",
+    "english_order": "Ordenar letras",
+    "math_title": "Matemáticas",
+    "math_basic": "Operaciones básicas",
+    "math_fill": "Completa el resultado",
+    "math_sequences": "Secuencias",
+    "history": "Historia",
+    "history_select": "Selecciona un minijuego de historia",
+    "history_title": "Historia",
+    "history_truefalse": "Verdadero o falso",
+    "history_multiple": "Opción múltiple",
+    "history_order": "Ordenar eventos",
+    "select_game": "Selecciona un minijuego",
+    "play": "Jugar",
+    "back": "Volver",
+    "menu": "Menú de minijuegos",
+    "select_area": "Selecciona un área",
+    "practice_languages": "Practicar idiomas",
+    "practice_math": "Practicar matemáticas",
+    "practice_history": "Practicar historia"
+  },
+  "minigame": {
+    "correct": "¡Correcto!",
+    "incorrect": "Incorrecto. Respuesta correcta:\n{{answer}}",
+    "finished": "¡Juego terminado!",
+    "score": "Puntaje: {{score}} / {{total}}",
+    "play_again": "Jugar de nuevo",
+    "back_to_games": "Volver a minijuegos",
+    "next": "Siguiente",
+    "submit": "Enviar",
+    "choose_option": "Elige una opción",
+    "type_answer": "Escribe tu respuesta",
+    "translate_to_english": "Traduce al inglés:",
+    "english_translation_placeholder": "Escribe en inglés...",
+    "check": "Comprobar",
+    "question_x_of_y": "Pregunta {{current}} de {{total}}",
+    "score_short": "Puntaje: {{score}}",
+    "solve_operation": "Resuelve la operación:",
+    "answer_placeholder": "Respuesta",
+    "check_button": "Comprobar",
+    "question_count": "Pregunta {{count}} de {{total}}",
+    "complete_result": "Completa el resultado:",
+    "missing_number": "Número que falta",
+    "what_number_is_missing": "¿Qué número falta en la secuencia?",
+    "number_to_fill": "Número que falta",
+    "true_false_question": "¿Es verdadero o falso?",
+    "true": "Verdadero",
+    "false": "Falso",
+    "question_number": "Pregunta {{current}} de {{total}}",
+    "select_correct_answer": "Selecciona la respuesta correcta:",
+    "order_events": "Ordena los eventos del más antiguo al más reciente:",
+    "check_answer": "Comprobar respuesta",
+    "which_is_translation": "¿Cuál es la traducción correcta?",
+    "order_letters": "Ordena las letras para formar la palabra:",
+    "english_word_placeholder": "Escribe la palabra en inglés...",
+    "question": "Pregunta {{current}} de {{total}}"
+  },
+  "menu": {
+    "languages": "Idiomas",
+    "math": "Matemáticas",
+    "history": "Historia"
+  },
+  "home": {
+    "title": "Bienvenido a Aprende+",
+    "subtitle": "¡Aprende jugando con minijuegos de idiomas, matemáticas e historia!",
+    "cta": "¡Empieza a aprender!",
+    "feature1_title": "Aprende jugando",
+    "feature1_desc": "Minijuegos interactivos para practicar y divertirte.",
+    "feature2_title": "Estadísticas visuales",
+    "feature2_desc": "Gráficos y evolución de tu progreso.",
+    "feature3_title": "Logros y recompensas",
+    "feature3_desc": "Desbloquea logros y motívate cada día.",
+    "feature4_title": "Personalización",
+    "feature4_desc": "Elige tu avatar, tema y hazlo tuyo."
+  },
+  "auth": {
+    "name": "Nombre",
+    "email": "Email",
+    "password": "Contraseña",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "loading": "Cargando...",
+    "login_title": "Iniciar sesión",
+    "login_subtitle": "Accede a tu cuenta para continuar",
+    "register_title": "Registro",
+    "register_subtitle": "Crea tu cuenta para empezar",
+    "no_account": "¿No tienes cuenta?",
+    "register_link": "Regístrate",
+    "have_account": "¿Ya tienes cuenta?",
+    "login_link": "Inicia sesión"
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "decorative_bg": "Fondo decorativo"
+  },
+  "alerts": {
+    "fill_all_fields": "Completa todos los campos.",
+    "password_min_length": "La nueva contraseña debe tener al menos 6 caracteres.",
+    "passwords_no_match": "Las contraseñas nuevas no coinciden.",
+    "name_empty": "El nombre no puede estar vacío.",
+    "name_updated": "Nombre actualizado correctamente.",
+    "avatar_updated": "Avatar actualizado correctamente.",
+    "password_changed_success": "Cambio de contraseña simulado (solo demo)."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{app}}. Todos los derechos reservados."
+  }
+} 

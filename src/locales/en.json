@@ -1,0 +1,219 @@
+{
+  "navbar": {
+    "panel": "Dashboard",
+    "games": "Games",
+    "login": "Login",
+    "register": "Register",
+    "points": "Points",
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "user_stats": "User statistics",
+    "total_points": "Total points:",
+    "achievements": "Achievements",
+    "progress_info": "Keep playing to unlock more achievements and improve your stats!"
+  },
+  "stats": {
+    "games_played": "Games played",
+    "questions_answered": "Questions answered",
+    "max_streak": "Max streak",
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "accuracy": "Accuracy %",
+    "correct_vs_wrong": "Correct vs Wrong",
+    "games_by_area": "Games by area",
+    "registered_since": "Registered since"
+  },
+  "areas": {
+    "languages": "Languages",
+    "math": "Math",
+    "history": "History"
+  },
+  "achievements": {
+    "first_game": {
+      "name": "First game!",
+      "desc": "Complete your first minigame."
+    },
+    "100_points": {
+      "name": "100 points",
+      "desc": "Reach 100 points."
+    },
+    "5_correct": {
+      "name": "Streak of 5",
+      "desc": "Get 5 correct answers in a row."
+    },
+    "10_correct": {
+      "name": "Streak of 10",
+      "desc": "Get 10 correct answers in a row."
+    },
+    "all_areas": {
+      "name": "Explorer",
+      "desc": "Play at least one minigame in each area."
+    },
+    "10_games": {
+      "name": "Consistent player",
+      "desc": "Play 10 minigames."
+    },
+    "perfect_game": {
+      "name": "Perfect!",
+      "desc": "Finish a minigame without mistakes."
+    },
+    "first_fail": {
+      "name": "Learning from mistakes",
+      "desc": "Make your first mistake in a minigame."
+    },
+    "3_days_row": {
+      "name": "Consistency",
+      "desc": "Play 3 days in a row (simulated)."
+    },
+    "hidden": {
+      "name": "Hidden achievement",
+      "desc": "Discover the secret achievement."
+    },
+    "first_avatar": {
+      "name": "New look!",
+      "desc": "Customize your avatar for the first time."
+    },
+    "first_name_change": {
+      "name": "Renewed identity",
+      "desc": "Change your username."
+    },
+    "first_theme": {
+      "name": "Personalization",
+      "desc": "Change the platform theme."
+    },
+    "unlocked": "Unlocked!",
+    "locked": "Locked",
+    "unlocked_title": "Achievement unlocked!",
+    "unlocked_message": "You have unlocked a new achievement:",
+    "close": "Close"
+  },
+  "profile": {
+    "edit_name": "Edit name",
+    "change_photo": "Change photo",
+    "change_password": "Change password",
+    "delete_account": "Delete account",
+    "logout": "Logout",
+    "avatar_hint": "Recommended image: square, at least 120x120px",
+    "user": "User",
+    "password_demo_info": "This form is only a demo simulation. No real password is stored.",
+    "current_password": "Current password",
+    "new_password": "New password",
+    "confirm_new_password": "Confirm new password",
+    "light_mode": "Light mode",
+    "dark_mode": "Dark mode"
+  },
+  "games": {
+    "languages_title": "Languages",
+    "english": "English",
+    "english_direct": "Direct translation",
+    "english_multiple": "Multiple choice",
+    "english_order": "Letter order",
+    "math_title": "Math",
+    "math_basic": "Basic operations",
+    "math_fill": "Fill the result",
+    "math_sequences": "Sequences",
+    "history": "History",
+    "history_select": "Select a history minigame",
+    "history_title": "History",
+    "history_truefalse": "True or false",
+    "history_multiple": "Multiple choice",
+    "history_order": "Order events",
+    "select_game": "Select a minigame",
+    "play": "Play",
+    "back": "Back",
+    "menu": "Minigames menu",
+    "select_area": "Select an area",
+    "practice_languages": "Practice languages",
+    "practice_math": "Practice math",
+    "practice_history": "Practice history"
+  },
+  "minigame": {
+    "correct": "Correct!",
+    "incorrect": "Incorrect. Correct answer:\n{{answer}}",
+    "finished": "Game finished!",
+    "score": "Score: {{score}} / {{total}}",
+    "play_again": "Play again",
+    "back_to_games": "Back to minigames",
+    "next": "Next",
+    "submit": "Submit",
+    "choose_option": "Choose an option",
+    "type_answer": "Type your answer",
+    "translate_to_english": "Translate to English:",
+    "english_translation_placeholder": "Type in English...",
+    "check": "Check",
+    "question_x_of_y": "Question {{current}} of {{total}}",
+    "score_short": "Score: {{score}}",
+    "solve_operation": "Solve the operation:",
+    "answer_placeholder": "Answer",
+    "check_button": "Check",
+    "question_count": "Question {{count}} of {{total}}",
+    "complete_result": "Complete the result:",
+    "missing_number": "Missing number",
+    "what_number_is_missing": "What number is missing in the sequence?",
+    "number_to_fill": "Number to fill",
+    "true_false_question": "Is it true or false?",
+    "true": "True",
+    "false": "False",
+    "question_number": "Question {{current}} of {{total}}",
+    "select_correct_answer": "Select the correct answer:",
+    "order_events": "Order the events from oldest to most recent:",
+    "check_answer": "Check answer",
+    "which_is_translation": "Which is the correct translation?",
+    "order_letters": "Order the letters to form the word:",
+    "english_word_placeholder": "Type the word in English...",
+    "question": "Question {{current}} of {{total}}"
+  },
+  "menu": {
+    "languages": "Languages",
+    "math": "Math",
+    "history": "History"
+  },
+  "home": {
+    "title": "Welcome to Aprende+",
+    "subtitle": "Learn by playing with language, math and history minigames!",
+    "cta": "Start learning!",
+    "feature1_title": "Learn by playing",
+    "feature1_desc": "Interactive minigames to practice and have fun.",
+    "feature2_title": "Visual statistics",
+    "feature2_desc": "Charts and progress evolution.",
+    "feature3_title": "Achievements and rewards",
+    "feature3_desc": "Unlock achievements and stay motivated every day.",
+    "feature4_title": "Personalization",
+    "feature4_desc": "Choose your avatar, theme and make it yours."
+  },
+  "auth": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register",
+    "loading": "Loading...",
+    "login_title": "Login",
+    "login_subtitle": "Access your account to continue",
+    "register_title": "Register",
+    "register_subtitle": "Create your account to get started",
+    "no_account": "Don't have an account?",
+    "register_link": "Sign up",
+    "have_account": "Already have an account?",
+    "login_link": "Log in"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "decorative_bg": "Decorative background"
+  },
+  "alerts": {
+    "fill_all_fields": "Fill in all fields.",
+    "password_min_length": "The new password must be at least 6 characters.",
+    "passwords_no_match": "New passwords do not match.",
+    "name_empty": "Name cannot be empty.",
+    "name_updated": "Name updated successfully.",
+    "avatar_updated": "Avatar updated successfully.",
+    "password_changed_success": "Password change simulated (demo only)."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{app}}. All rights reserved."
+  }
+} 
