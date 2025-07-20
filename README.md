@@ -124,15 +124,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 👨‍💻 Autor
 
-**Tu Nombre** - [@tu-usuario](https://github.com/tu-usuario)
+**Tu Nombre** - Jesús Martín Saldaña - https://github.com/JesusMarth
 
-## 🙏 Agradecimientos
-
-- Bootstrap por el framework CSS
-- React por la librería de interfaz
-- i18next por la internacionalización
-- Todos los contribuidores que han ayudado con el proyecto
-
----
 
 ⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub!
