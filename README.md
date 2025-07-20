@@ -1,29 +1,29 @@
 # 🎓 Aprende+
 
-Una aplicación educativa interactiva diseñada para hacer el aprendizaje divertido y accesible. Aprende+ combina minijuegos educativos con un sistema de logros y estadísticas para motivar el aprendizaje continuo.
+An interactive educational app designed to make learning fun and accessible. Learn+ combines educational mini-games with an achievement system and detailed stats to motivate continuous learning.
 
-## ✨ Características
+## ✨ Features
 
-### 🎮 Minijuegos Educativos
-- **Matemáticas**: Operaciones básicas, secuencias numéricas y completar resultados
-- **Idiomas**: Traducción directa, ordenar letras y opciones múltiples
-- **Historia**: Verdadero/Falso, ordenar eventos y opciones múltiples
+### 🎮 Educational Mini-Games
+- **Math**: Basic operations, number sequences, and result completion
+- **Languages**: Direct translation, letter sorting, and multiple choice
+- **History**: True/False, event ordering, and multiple choice
 
-### 🏆 Sistema de Logros
-- Logros desbloqueables por completar minijuegos
-- Estadísticas detalladas del progreso
-- Sistema de puntos y rachas
+### 🏆 Achievement System
+- Unlock achievements by completing mini-games
+- Detailed progress statistics
+- Points and streak system to keep you motivated
 
-### 🌍 Internacionalización
-- Soporte completo para español e inglés
-- Interfaz adaptativa según el idioma seleccionado
+### 🌍 Internationalization
+- Full support for Spanish and English
+- Adaptive interface based on selected language
 
-### 🎨 Diseño Moderno
-- Interfaz responsive y accesible
-- Modo oscuro/claro
-- Diseño intuitivo y atractivo
+### 🎨 Modern Design
+- Responsive and accessible UI
+- Light and dark mode
+- Intuitive and attractive layout
 
-## 🚀 Tecnologías Utilizadas
+## 🚀 Technologies Used
 
 - **Frontend**: React 18 + Vite
 - **Routing**: React Router DOM
@@ -32,47 +32,46 @@ Una aplicación educativa interactiva diseñada para hacer el aprendizaje divert
 - **Estado**: React Context API
 - **Iconos**: Bootstrap Icons
 
-## 📦 Opciones de Instalación
+## 📦 Installation
 
-1. **Clona el repositorio:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/tu-usuario/aprende-plus.git
    cd aprende-plus
    ```
 
-2. **Instala las dependencias:**
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Ejecuta el proyecto:**
+3. **Run the project:**
    ```bash
    npm run dev
    ```
 
-4. **Abre tu navegador en:**
+4. **Open your browser at:**
    ```
    http://localhost:5173
    ```
 
-## 🎯 Cómo Jugar
+## 🎯 How to Play
 
-### Registro e Inicio de Sesión
-- Crea una cuenta o inicia sesión para guardar tu progreso
-- Tu perfil mantendrá todas tus estadísticas y logros
+### Sign Up & Log In
+- Create an account or log in to save your progress.
+- Your profile will store all your stats and unlocked achievements.
 
-### Explorando los Minijuegos
-1. **Navega** por las diferentes categorías desde el menú principal
-2. **Selecciona** un minijuego que te interese
-3. **Juega** y responde las preguntas correctamente
-4. **Gana puntos** y desbloquea logros
+### Explore Mini-Games
+1. **Browse** through the different categories from the main menu.
+2. **Select** a mini-game you’re interested in.
+3. **Play** and answer questions correctly to earn points and achievements.
 
-### Sistema de Puntos
-- Respuestas correctas: +10 puntos
-- Respuestas incorrectas: +0 puntos
-- Rachas consecutivas otorgan bonificaciones
+### Points System
+- Correct answers: +10 points
+- Incorrect answers: +0 points
+- Consecutive correct answers grant bonus points
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 src/
@@ -88,35 +87,19 @@ src/
 └── utils/              # Utilidades
 ```
 
-## 🎨 Personalización
+## 🎨 Customization
 
-### Temas de Colores
-- **Matemáticas**: Verde (#28a745)
-- **Idiomas**: Azul (#007bff)
-- **Historia**: Púrpura (#6f42c1)
+### Category Colors
+- **Math**: Green  (#28a745)
+- **Languages**: Blue  (#007bff)
+- **History**: Purple  (#6f42c1)
 
-### Modo Oscuro
-La aplicación se adapta automáticamente a las preferencias del sistema o puede ser configurada manualmente.
+### Dark Mode
+The app automatically adapts to your system preferences or can be switched manually.
 
-## 🌐 Despliegue
+## 🌐 Deployment
 
-### Vercel (Recomendado)
-1. Conecta tu repositorio a Vercel
-2. Configura el build command: `npm run build`
-3. Configura el output directory: `dist`
-
-### Netlify
-1. Conecta tu repositorio a Netlify
-2. Configura el build command: `npm run build`
-3. Configura el publish directory: `dist`
-
-## 🤝 Contribuir
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+Vercel
 
 ## 📝 Licencia
 
