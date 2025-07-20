@@ -32,7 +32,7 @@ Una aplicación educativa interactiva diseñada para hacer el aprendizaje divert
 - **Estado**: React Context API
 - **Iconos**: Bootstrap Icons
 
-## 📦 Instalación
+## 📦 Opciones de Instalación
 
 1. **Clona el repositorio:**
    ```bash
